@@ -20,11 +20,11 @@ public class PayrollSystemModel {
             personnels = new ArrayList<Personnel>();
     }
     
-    public void addPersonnel(String fileDirectory) throws Exception {
+    public void addPersonnel(File fileDirectory) throws Exception {
         Statement stmt = null; 
         String sql;
 
-            File file = new File(fileDirectory);
+            File file = fileDirectory;
             Workbook workbook = Workbook.getWorkbook(file);
             Sheet sheet = workbook.getSheet(0);
 
@@ -160,11 +160,11 @@ public class PayrollSystemModel {
         }
     }
     
-    public void addDTR(String fileDirectory) throws Exception {
+    public void addDTR(File fileDirectory) throws Exception {
         Statement stmt = null; 
         String sql;
         
-            File file = new File(fileDirectory);
+            File file = fileDirectory;
             Workbook workbook = Workbook.getWorkbook(file);
             Sheet sheet = workbook.getSheet(0);
 
